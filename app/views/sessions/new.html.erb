@@ -1,4 +1,8 @@
-<%= form_tag("/signin") do %>
-  <%= collection_select :user, :id, User.all, :id, :name %><br />
-  <%= submit_tag("Sign In") %>
+<%= form_for @user, url: '/signin' do |f| %>
+  <%= content_tag :div, class: "field" do %>
+    <%= f.label "Select user" %><br />
+    <%= f.collection_select(:id, User.all, :id, :name) %>
+  <% end %>
+
+  <%= f.submit "Sign In" %>
 <% end %>
