@@ -6,7 +6,7 @@ module LoginHelper
   end
 
   def user_signup
-    fill_in("user[name]", :with => "Amy Poehler")
+    fill_in("user_name", :with => "Amy Poehler")
     fill_in("user[height]", :with => "58")
     fill_in("user[happiness]", :with => "3")
     fill_in("user[nausea]", :with => "2")
